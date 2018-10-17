@@ -3,11 +3,8 @@ body{
   padding:0 200px 0 150px;
 }
 #container{
-  background-color:#0ff;
   float:left;
   width:100%; 
-  border-left:150px solid #0f0;
-  border-right:200px solid #f00;
   margin-left:-150px;
   margin-right:-200px;
   display:inline;
