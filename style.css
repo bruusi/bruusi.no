@@ -7,6 +7,8 @@ body{
   width:100%; 
   margin-left:-150px;
   margin-right:-200px;
+  border-left:150px solid white;
+  border-right:200px solid white;
   display:inline;
 }
 #leftRail{
