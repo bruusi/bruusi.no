@@ -47,7 +47,7 @@
         'architecture and development of service-oriented solutions (SOA and event-driven). Passionate about agile ' +
         'development methods and well-established principles such as SOLID. A highly productive and experienced ' +
         'consultant across both Windows and web solutions.',
-      'intro.p2': 'Thomas has worked as a consultant since 1999 and today works for ' + A.everdeen +
+      'intro.p2': 'Thomas has worked in IT since 1999 and today works as a consultant for ' + A.everdeen +
         '. He is currently tech lead / solution architect at NRK.',
 
       'erfaring.lead': 'A selection of the clients I have worked with:',
@@ -95,7 +95,7 @@
         'Entwicklung serviceorientierter Lösungen (SOA und ereignisgesteuert). Er begeistert sich für agile ' +
         'Entwicklungsmethoden und bewährte Prinzipien wie SOLID. Ein äußerst produktiver und erfahrener Berater ' +
         'für Windows- und Weblösungen.',
-      'intro.p2': 'Thomas arbeitet seit 1999 als Berater und ist heute für ' + A.everdeen +
+      'intro.p2': 'Thomas arbeitet seit 1999 in der IT und ist heute als Berater für ' + A.everdeen +
         ' tätig. Derzeit ist er Tech Lead / Lösungsarchitekt beim NRK.',
 
       'erfaring.lead': 'Eine Auswahl der Kunden, für die ich gearbeitet habe:',
@@ -143,7 +143,7 @@
         'de soluciones orientadas a servicios (SOA y basadas en eventos). Apasionado por las metodologías ágiles y ' +
         'por principios consolidados como SOLID. Consultor muy productivo y experimentado tanto en soluciones ' +
         'Windows como web.',
-      'intro.p2': 'Thomas trabaja como consultor desde 1999 y actualmente lo hace para ' + A.everdeen +
+      'intro.p2': 'Thomas trabaja en TI desde 1999 y hoy lo hace como consultor para ' + A.everdeen +
         '. En este momento es tech lead / arquitecto de soluciones en NRK.',
 
       'erfaring.lead': 'Una selección de los clientes con los que he trabajado:',
