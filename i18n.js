@@ -50,14 +50,14 @@
       'intro.p2': 'Thomas has worked in IT since 1999 and today works as a consultant for ' + A.everdeen +
         '. He is currently tech lead / solution architect at NRK.',
 
-      'erfaring.lead': 'A selection of the clients I have worked with:',
+      'erfaring.lead': 'A selection of the clients he has worked with:',
       'erfaring.badge': 'now',
 
       'reise.lead': 'The road here went through three countries — and four languages.',
       'reise.edu.when': '1995–1999',
       'reise.edu.text': A.surrey + ', Guildford. Electronic and Electrical Engineering — four years, with the third year in industry.',
       'reise.de.when': '1997–1998',
-      'reise.de.text': 'The industrial year: 13 months at ABB Daimler Benz (' + A.adtranz + ') in Hennigsdorf. Lived in Berlin.',
+      'reise.de.text': 'The industrial year: 13 months at ABB Daimler Benz (' + A.adtranz + ') in Hennigsdorf. Based in Berlin.',
       'reise.uk.when': '4+ years',
       'reise.uk.text': 'London — ' + A.hrm + ', today Cezanne HR.',
       'reise.es.when': 'then',
@@ -66,7 +66,7 @@
       'reise.no.text': 'Back in Norway — working as a consultant ever since.',
 
       'om.p1': 'You can read more about how ' + A.proff('Bruusi Holding AS is doing here') + '.',
-      'kontakt.lead': 'You can find me on LinkedIn:',
+      'kontakt.lead': 'You can find him on LinkedIn:',
 
       'alt.spring': 'Spring', 'alt.summer': 'Summer', 'alt.autumn': 'Autumn', 'alt.winter': 'Winter',
 
@@ -98,7 +98,7 @@
       'intro.p2': 'Thomas arbeitet seit 1999 in der IT und ist heute als Berater für ' + A.everdeen +
         ' tätig. Derzeit ist er Tech Lead / Lösungsarchitekt beim NRK.',
 
-      'erfaring.lead': 'Eine Auswahl der Kunden, für die ich gearbeitet habe:',
+      'erfaring.lead': 'Eine Auswahl der Kunden, für die er gearbeitet hat:',
       'erfaring.badge': 'jetzt',
 
       'reise.lead': 'Der Weg hierher führte durch drei Länder — und vier Sprachen.',
@@ -114,7 +114,7 @@
       'reise.no.text': 'Zurück in Norwegen — seitdem als Berater tätig.',
 
       'om.p1': 'Mehr darüber, ' + A.proff('wie es Bruusi Holding AS ergeht') + ', erfährst du hier.',
-      'kontakt.lead': 'Du findest mich auf LinkedIn:',
+      'kontakt.lead': 'Du findest ihn auf LinkedIn:',
 
       'alt.spring': 'Frühling', 'alt.summer': 'Sommer', 'alt.autumn': 'Herbst', 'alt.winter': 'Winter',
 
@@ -146,14 +146,14 @@
       'intro.p2': 'Thomas trabaja en TI desde 1999 y hoy lo hace como consultor para ' + A.everdeen +
         '. En este momento es tech lead / arquitecto de soluciones en NRK.',
 
-      'erfaring.lead': 'Una selección de los clientes con los que he trabajado:',
+      'erfaring.lead': 'Una selección de los clientes con los que ha trabajado:',
       'erfaring.badge': 'ahora',
 
       'reise.lead': 'El camino hasta aquí pasó por tres países — y cuatro idiomas.',
       'reise.edu.when': '1995–1999',
       'reise.edu.text': A.surrey + ', Guildford. Electronic and Electrical Engineering — cuatro años, el tercero en la industria.',
       'reise.de.when': '1997–1998',
-      'reise.de.text': 'El año en la industria: 13 meses en ABB Daimler Benz (' + A.adtranz + ') en Hennigsdorf. Viví en Berlín.',
+      'reise.de.text': 'El año en la industria: 13 meses en ABB Daimler Benz (' + A.adtranz + ') en Hennigsdorf. Con residencia en Berlín.',
       'reise.uk.when': '4+ años',
       'reise.uk.text': 'Londres — ' + A.hrm + ', hoy Cezanne HR.',
       'reise.es.when': 'después',
@@ -162,7 +162,7 @@
       'reise.no.text': 'De vuelta en Noruega — trabajando como consultor desde entonces.',
 
       'om.p1': 'Puedes leer más sobre cómo le va a ' + A.proff('Bruusi Holding AS aquí') + '.',
-      'kontakt.lead': 'Me encuentras en LinkedIn:',
+      'kontakt.lead': 'Puedes encontrarlo en LinkedIn:',
 
       'alt.spring': 'Primavera', 'alt.summer': 'Verano', 'alt.autumn': 'Otoño', 'alt.winter': 'Invierno',
 
