@@ -63,7 +63,7 @@
       'reise.es.when': 'then',
       'reise.es.text': 'A year in Madrid, then ' + A.infocasa + ' near Marbella on the Costa del Sol.',
       'reise.no.when': 'today',
-      'reise.no.text': 'Everdeen DA — tech lead / solution architect at NRK.',
+      'reise.no.text': 'Back in Norway — working as a consultant ever since.',
 
       'om.p1': 'You can read more about how ' + A.proff('Bruusi Holding AS is doing here') + '.',
       'kontakt.lead': 'You can find me on LinkedIn:',
@@ -111,7 +111,7 @@
       'reise.es.when': 'danach',
       'reise.es.text': 'Ein Jahr in Madrid, danach ' + A.infocasa + ' bei Marbella an der Costa del Sol.',
       'reise.no.when': 'heute',
-      'reise.no.text': 'Everdeen DA — Tech Lead / Lösungsarchitekt beim NRK.',
+      'reise.no.text': 'Zurück in Norwegen — seitdem als Berater tätig.',
 
       'om.p1': 'Mehr darüber, ' + A.proff('wie es Bruusi Holding AS ergeht') + ', erfährst du hier.',
       'kontakt.lead': 'Du findest mich auf LinkedIn:',
@@ -159,7 +159,7 @@
       'reise.es.when': 'después',
       'reise.es.text': 'Un año en Madrid y después ' + A.infocasa + ', cerca de Marbella, en la Costa del Sol.',
       'reise.no.when': 'hoy',
-      'reise.no.text': 'Everdeen DA — tech lead / arquitecto de soluciones en NRK.',
+      'reise.no.text': 'De vuelta en Noruega — trabajando como consultor desde entonces.',
 
       'om.p1': 'Puedes leer más sobre cómo le va a ' + A.proff('Bruusi Holding AS aquí') + '.',
       'kontakt.lead': 'Me encuentras en LinkedIn:',
