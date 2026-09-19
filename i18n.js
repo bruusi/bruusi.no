@@ -113,8 +113,8 @@
       'reise.no.when': 'heute',
       'reise.no.text': 'Everdeen DA — Tech Lead / Lösungsarchitekt beim NRK.',
 
-      'om.p1': 'Mehr darüber, wie es ' + A.proff('Bruusi Holding AS ergeht, finden Sie hier') + '.',
-      'kontakt.lead': 'Sie finden mich auf LinkedIn:',
+      'om.p1': 'Mehr darüber, ' + A.proff('wie es Bruusi Holding AS ergeht') + ', erfährst du hier.',
+      'kontakt.lead': 'Du findest mich auf LinkedIn:',
 
       'alt.spring': 'Frühling', 'alt.summer': 'Sommer', 'alt.autumn': 'Herbst', 'alt.winter': 'Winter',
 
