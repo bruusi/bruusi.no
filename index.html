@@ -173,18 +173,15 @@
       }
 
       function pick() {
-        // Nederst på siden: alltid den siste seksjonen (kort seksjon som
-        // ikke rekker opp til «linjen» ellers ville aldri blitt aktiv).
-        var scrollBottom = window.scrollY + window.innerHeight;
-        if (scrollBottom >= document.documentElement.scrollHeight - 2) {
-          setActive(sections[sections.length - 1].id);
-          return;
-        }
-        // Ellers: den øverste seksjonen som har passert en linje nær toppen.
-        var line = 120;
+        // Aktiv = seksjonen hvis topp er nærmest en linje nær toppen.
+        // Robust også når siden er for kort til at de nederste seksjonene
+        // rekker helt opp til linjen (da vinner den som er nærmest).
+        var line = 110;
         var id = sections[0].id;
+        var best = Infinity;
         sections.forEach(function (s) {
-          if (s.getBoundingClientRect().top <= line) id = s.id;
+          var d = Math.abs(s.getBoundingClientRect().top - line);
+          if (d < best) { best = d; id = s.id; }
         });
         setActive(id);
       }
