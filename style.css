@@ -79,8 +79,16 @@ img { max-width: 100%; height: auto; display: block; }
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 12px 24px;
+  gap: 10px 24px;
 }
+
+/* Merke + språkvelger på første rad, menyen på egen rad under.
+   Menyetikettene har ulik lengde per språk (erfaring / experience /
+   experiencia), og uten denne oppdelingen dyttes språkvelgeren ned på ny
+   rad når etikettene blir lange nok — altså hopper den ved språkbytte. */
+.brand { order: 1; }
+.lang-switch { order: 2; margin-left: auto; }
+.site-nav { order: 3; flex-basis: 100%; }
 .brand { display: flex; align-items: center; gap: 12px; }
 .brand-logo {
   width: 44px;
@@ -127,15 +135,11 @@ img { max-width: 100%; height: auto; display: block; }
 .lang-switch a:hover { color: var(--text); background: var(--accent-soft); text-decoration: none; }
 .lang-switch a.active { color: var(--accent); background: var(--accent-soft); }
 
-/* På smale skjermer: merke + språk på første rad, menyen på egen rad under.
-   Sparer en hel rad i den sticky headeren. */
+/* Krymp på smale skjermer så merke + språk deler første rad og hele menyen
+   får plass på én rad under. */
 @media (max-width: 700px) {
-  .header-inner { row-gap: 10px; column-gap: 8px; }
-  .brand { order: 1; gap: 9px; }
-  .lang-switch { order: 2; margin-left: auto; }
-  .site-nav { order: 3; flex-basis: 100%; }
-
-  /* Krymp litt så merke + språk deler første rad og menyen får plass på én. */
+  .header-inner { column-gap: 8px; }
+  .brand { gap: 9px; }
   .brand-logo { width: 36px; height: 36px; }
   .brand h1 { font-size: 1rem; }
   .orgnr { font-size: 0.7rem; }
