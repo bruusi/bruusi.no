@@ -16,6 +16,11 @@
   <meta property="og:url" content="https://bruusi.no/" />
 
   <link rel="canonical" href="https://bruusi.no/" />
+  <link rel="alternate" hreflang="no" href="https://bruusi.no/" />
+  <link rel="alternate" hreflang="en" href="https://bruusi.no/?lang=en" />
+  <link rel="alternate" hreflang="de" href="https://bruusi.no/?lang=de" />
+  <link rel="alternate" hreflang="es" href="https://bruusi.no/?lang=es" />
+  <link rel="alternate" hreflang="x-default" href="https://bruusi.no/" />
   <link rel="manifest" href="/manifest.webmanifest" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="/icons/icon-192x192.png" type="image/png" />
@@ -23,7 +28,7 @@
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-  <a class="skip-link" href="#intro">Hopp til innhold</a>
+  <a class="skip-link" href="#intro" data-i18n="skip">Hopp til innhold</a>
 
   <header class="site-header" id="top">
     <div class="header-inner">
@@ -55,25 +60,34 @@
           <p class="orgnr">Org nr 921&nbsp;038&nbsp;917</p>
         </div>
       </div>
-      <nav class="site-nav" aria-label="Hovedmeny">
-        <a href="#intro">intro</a>
-        <a href="#erfaring">erfaring</a>
-        <a href="#om">om</a>
-        <a href="#kontakt">kontakt</a>
+
+      <nav class="site-nav" aria-label="Hovedmeny" data-i18n-label="aria.mainnav">
+        <a href="#intro" data-i18n="nav.intro">intro</a>
+        <a href="#erfaring" data-i18n="nav.erfaring">erfaring</a>
+        <a href="#reise" data-i18n="nav.reise">reise</a>
+        <a href="#om" data-i18n="nav.om">om</a>
+        <a href="#kontakt" data-i18n="nav.kontakt">kontakt</a>
+      </nav>
+
+      <nav class="lang-switch" aria-label="Språk" data-i18n-label="aria.langnav">
+        <a href="?lang=no" hreflang="no" lang="no" data-lang="no" title="Norsk">no</a>
+        <a href="?lang=en" hreflang="en" lang="en" data-lang="en" title="English">en</a>
+        <a href="?lang=de" hreflang="de" lang="de" data-lang="de" title="Deutsch">de</a>
+        <a href="?lang=es" hreflang="es" lang="es" data-lang="es" title="Español">es</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section id="intro" class="section" aria-labelledby="intro-title">
-      <p class="kicker" aria-hidden="true">// 01 · intro</p>
-      <h2 id="intro-title" class="section-title">Intro</h2>
+      <p class="kicker" aria-hidden="true" data-i18n="kicker.intro">// 01 · intro</p>
+      <h2 id="intro-title" class="section-title" data-i18n="title.intro">Intro</h2>
       <div class="section-body">
         <figure class="section-image">
-          <img src="/assets/spring.jpg" alt="Vår" loading="lazy" width="1200" height="800" />
+          <img src="/assets/spring.jpg" alt="Vår" data-i18n-alt="alt.spring" loading="lazy" width="1200" height="800" />
         </figure>
         <div class="prose">
-          <p>
+          <p data-i18n="intro.p1">
             Thomas Bruusgaard er en svært erfaren teknolog med over 25 års erfaring.
             Han har vært involvert i flere store prosjekter for firmaer i inn- og utland.
             Spisskompetanse innen arkitektur og utvikling av tjenesteorienterte løsninger
@@ -81,7 +95,7 @@
             prinsipper som SOLID. Meget produktiv og erfaren konsulent innen både
             windows- og web-løsninger.
           </p>
-          <p>
+          <p data-i18n="intro.p2">
             Thomas har jobbet som konsulent siden 1999 og jobber i dag for
             <a href="https://everdeen.no" target="_blank" rel="noopener noreferrer">Everdeen DA</a>.
             For tiden er han tech lead / løsningsarkitekt hos NRK.
@@ -91,16 +105,16 @@
     </section>
 
     <section id="erfaring" class="section" aria-labelledby="erfaring-title">
-      <p class="kicker" aria-hidden="true">// 02 · erfaring</p>
-      <h2 id="erfaring-title" class="section-title">Erfaring</h2>
+      <p class="kicker" aria-hidden="true" data-i18n="kicker.erfaring">// 02 · erfaring</p>
+      <h2 id="erfaring-title" class="section-title" data-i18n="title.erfaring">Erfaring</h2>
       <div class="section-body">
         <figure class="section-image">
-          <img src="/assets/summer.jpg" alt="Sommer" loading="lazy" width="1200" height="800" />
+          <img src="/assets/summer.jpg" alt="Sommer" data-i18n-alt="alt.summer" loading="lazy" width="1200" height="800" />
         </figure>
         <div class="prose">
-          <p>Dette er et knippe av kundene jeg har jobbet hos:</p>
+          <p data-i18n="erfaring.lead">Dette er et knippe av kundene jeg har jobbet hos:</p>
           <ul class="client-list">
-            <li><span class="client-name">NRK</span> <span class="badge">nå</span></li>
+            <li><span class="client-name">NRK</span> <span class="badge" data-i18n="erfaring.badge">nå</span></li>
             <li>GuardRec</li>
             <li>If</li>
             <li>Kredinor</li>
@@ -111,15 +125,65 @@
       </div>
     </section>
 
+    <section id="reise" class="section" aria-labelledby="reise-title">
+      <p class="kicker" aria-hidden="true" data-i18n="kicker.reise">// 03 · reise</p>
+      <h2 id="reise-title" class="section-title" data-i18n="title.reise">Reise</h2>
+      <div class="section-body full">
+        <div class="prose">
+          <p data-i18n="reise.lead">Veien hit gikk om tre land — og fire språk.</p>
+          <ul class="timeline">
+            <li>
+              <span class="tl-code">GB</span>
+              <span class="tl-when" data-i18n="reise.edu.when">1995–1999</span>
+              <span class="tl-text">
+                <span data-i18n="reise.edu.text"><a href="https://www.surrey.ac.uk/" target="_blank" rel="noopener noreferrer">University of Surrey</a>, Guildford. Electronic and Electrical Engineering — fire år med tredjeåret i industrien.</span>
+              </span>
+            </li>
+            <li>
+              <span class="tl-code">DE</span>
+              <span class="tl-when" data-i18n="reise.de.when">1997–1998</span>
+              <span class="tl-text">
+                <span data-i18n="reise.de.text">Industriåret: 13 måneder hos ABB Daimler Benz (<a href="https://en.wikipedia.org/wiki/Adtranz" target="_blank" rel="noopener noreferrer">AdTranz</a>) i Hennigsdorf. Bodde i Berlin.</span>
+                <button type="button" class="lang-chip" data-lang="de" title="Deutsch">de</button>
+              </span>
+            </li>
+            <li>
+              <span class="tl-code">GB</span>
+              <span class="tl-when" data-i18n="reise.uk.when">4+ år</span>
+              <span class="tl-text">
+                <span data-i18n="reise.uk.text">London — <a href="https://cezannehr.com/" target="_blank" rel="noopener noreferrer">HRM Software</a>, i dag Cezanne HR.</span>
+                <button type="button" class="lang-chip" data-lang="en" title="English">en</button>
+              </span>
+            </li>
+            <li>
+              <span class="tl-code">ES</span>
+              <span class="tl-when" data-i18n="reise.es.when">deretter</span>
+              <span class="tl-text">
+                <span data-i18n="reise.es.text">Et år i Madrid, deretter <a href="https://www.infocasa.com/" target="_blank" rel="noopener noreferrer">InfoCasa</a> ved Marbella på Costa del Sol.</span>
+                <button type="button" class="lang-chip" data-lang="es" title="Español">es</button>
+              </span>
+            </li>
+            <li>
+              <span class="tl-code">NO</span>
+              <span class="tl-when" data-i18n="reise.no.when">i dag</span>
+              <span class="tl-text">
+                <span data-i18n="reise.no.text">Everdeen DA — tech lead / løsningsarkitekt hos NRK.</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section id="om" class="section" aria-labelledby="om-title">
-      <p class="kicker" aria-hidden="true">// 03 · om</p>
-      <h2 id="om-title" class="section-title">Om</h2>
+      <p class="kicker" aria-hidden="true" data-i18n="kicker.om">// 04 · om</p>
+      <h2 id="om-title" class="section-title" data-i18n="title.om">Om</h2>
       <div class="section-body">
         <figure class="section-image">
-          <img src="/assets/autumn.jpg" alt="Høst" loading="lazy" width="1200" height="800" />
+          <img src="/assets/autumn.jpg" alt="Høst" data-i18n-alt="alt.autumn" loading="lazy" width="1200" height="800" />
         </figure>
         <div class="prose">
-          <p>
+          <p data-i18n="om.p1">
             Du kan lese mer om hvordan det går med
             <a href="https://proff.no/selskap/bruusi-holding-as/vettre/bedriftsr%C3%A5dgivning/IF8D26D043Z/" target="_blank" rel="noopener noreferrer">Bruusi Holding AS her</a>.
           </p>
@@ -128,14 +192,14 @@
     </section>
 
     <section id="kontakt" class="section" aria-labelledby="kontakt-title">
-      <p class="kicker" aria-hidden="true">// 04 · kontakt</p>
-      <h2 id="kontakt-title" class="section-title">Kontakt</h2>
+      <p class="kicker" aria-hidden="true" data-i18n="kicker.kontakt">// 05 · kontakt</p>
+      <h2 id="kontakt-title" class="section-title" data-i18n="title.kontakt">Kontakt</h2>
       <div class="section-body">
         <figure class="section-image">
-          <img src="/assets/winter.jpg" alt="Vinter" loading="lazy" width="1200" height="800" />
+          <img src="/assets/winter.jpg" alt="Vinter" data-i18n-alt="alt.winter" loading="lazy" width="1200" height="800" />
         </figure>
         <div class="prose">
-          <p>Du finner meg på LinkedIn:</p>
+          <p data-i18n="kontakt.lead">Du finner meg på LinkedIn:</p>
           <p>
             <a class="icon-link" href="https://www.linkedin.com/in/thomasbruusgaard" target="_blank" rel="noopener noreferrer">
               <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
@@ -153,6 +217,7 @@
     <p class="copyright">© <span id="year">2026</span> Bruusi Holding AS</p>
   </footer>
 
+  <script src="/i18n.js"></script>
   <script>
     // Fyll inn gjeldende år, og marker aktiv seksjon i menyen.
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -163,6 +228,18 @@
       links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
       var sections = Array.prototype.slice.call(document.querySelectorAll('main .section'));
       if (!sections.length) return;
+
+      // Den sticky headeren brekker til flere rader på smale skjermer. Vi måler
+      // den og deler høyden med CSS (scroll-margin-top) og med geometrien under,
+      // så overskrifter ikke havner bak headeren.
+      var header = document.querySelector('.site-header');
+      var headerH = 88;
+      function syncHeaderHeight() {
+        if (!header) return;
+        headerH = header.offsetHeight;
+        document.documentElement.style.setProperty('--header-h', headerH + 'px');
+      }
+      syncHeaderHeight();
 
       var current = null;
       function setActive(id) {
@@ -175,7 +252,7 @@
       // Hvilken seksjon geometrien tilsier ut fra scroll-posisjon. Nederst på
       // siden ligger flere seksjoner synlige samtidig — da velges den siste.
       function geometryPick() {
-        var line = 120;
+        var line = headerH + 32;
         var doc = document.documentElement;
         var scrollable = doc.scrollHeight > window.innerHeight + 4;
         if (scrollable && window.scrollY + window.innerHeight >= doc.scrollHeight - 2) {
@@ -210,10 +287,11 @@
         window.requestAnimationFrame(function () { setActive(geometryPick()); ticking = false; });
       }
       window.addEventListener('scroll', onScroll, { passive: true });
-      window.addEventListener('resize', onScroll);
+      window.addEventListener('resize', function () { syncHeaderHeight(); onScroll(); });
 
-      // Åpnet med en hash (f.eks. /#kontakt) → marker den direkte og lås kort
-      // mens nettleseren hopper dit.
+      // Åpnet med en hash (f.eks. /?lang=de#kontakt) → marker den direkte og lås
+      // kort mens nettleseren hopper dit. i18n.js kjører synkront under parsing,
+      // altså før ankerhoppet, så layouten er ferdig oversatt når det skjer.
       var initial = decodeURIComponent(window.location.hash.slice(1));
       if (initial && byId[initial]) { selectFromUser(initial); }
       else { setActive(geometryPick()); }

@@ -114,13 +114,44 @@ img { max-width: 100%; height: auto; display: block; }
 .site-nav a:hover { color: var(--text); background: var(--accent-soft); text-decoration: none; }
 .site-nav a.active { color: var(--accent); background: var(--accent-soft); }
 
+/* ---------- Språkvelger ---------- */
+.lang-switch { display: flex; gap: 2px; flex-wrap: wrap; }
+.lang-switch a {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+  padding: 5px 8px;
+  border-radius: 6px;
+  transition: color .15s ease, background-color .15s ease;
+}
+.lang-switch a:hover { color: var(--text); background: var(--accent-soft); text-decoration: none; }
+.lang-switch a.active { color: var(--accent); background: var(--accent-soft); }
+
+/* På smale skjermer: merke + språk på første rad, menyen på egen rad under.
+   Sparer en hel rad i den sticky headeren. */
+@media (max-width: 700px) {
+  .header-inner { row-gap: 10px; column-gap: 8px; }
+  .brand { order: 1; gap: 9px; }
+  .lang-switch { order: 2; margin-left: auto; }
+  .site-nav { order: 3; flex-basis: 100%; }
+
+  /* Krymp litt så merke + språk deler første rad og menyen får plass på én. */
+  .brand-logo { width: 36px; height: 36px; }
+  .brand h1 { font-size: 1rem; }
+  .orgnr { font-size: 0.7rem; }
+  .lang-switch a { font-size: 0.72rem; padding: 4px 6px; }
+  .site-nav a { font-size: 0.78rem; padding: 5px 7px; }
+}
+
 /* ---------- Sections ---------- */
 main { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
 
 .section {
   padding: 64px 0;
   border-bottom: 1px solid var(--border);
-  scroll-margin-top: 88px;
+  /* Headeren er sticky og brekker til flere rader på smale skjermer, så
+     offsetet settes fra faktisk høyde i JS (--header-h). 88px er fallback. */
+  scroll-margin-top: calc(var(--header-h, 88px) + 12px);
 }
 .section:last-of-type { border-bottom: 0; }
 
@@ -141,6 +172,8 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
 .section-body { display: grid; gap: 28px; }
 @media (min-width: 720px) {
   .section-body { grid-template-columns: 1fr 1fr; align-items: start; gap: 40px; }
+  /* Reise-seksjonen går i full bredde — tidslinja trenger plassen. */
+  .section-body.full { grid-template-columns: 1fr; }
 }
 
 .section-image { margin: 0; }
@@ -186,6 +219,54 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
   border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
   padding: 1px 7px;
   border-radius: 999px;
+}
+
+/* ---------- Tidslinje (Reise) ---------- */
+.timeline { list-style: none; margin: 1.4em 0 0; padding: 0; }
+.timeline li {
+  display: grid;
+  grid-template-columns: 2.6rem 7.5rem 1fr;
+  gap: 4px 14px;
+  align-items: baseline;
+  padding: 14px 0;
+  border-bottom: 1px dashed var(--border);
+}
+.timeline li:last-child { border-bottom: 0; }
+
+.tl-code {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  border-radius: 4px;
+  padding: 2px 0;
+}
+.tl-when { font-family: var(--mono); font-size: 0.82rem; color: var(--muted); }
+
+/* Klikkbar språk-chip: bytter sidens språk der språket ble lært. */
+.lang-chip {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  border-radius: 999px;
+  padding: 1px 8px;
+  margin-left: 7px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color .15s ease, background-color .15s ease;
+}
+.lang-chip::before { content: "→ "; opacity: .6; }
+.lang-chip:hover { background: var(--accent); color: var(--bg); }
+
+@media (max-width: 560px) {
+  .timeline li { grid-template-columns: 2.6rem 1fr; }
+  .tl-text { grid-column: 1 / -1; }
 }
 
 /* ---------- Icon link ---------- */
