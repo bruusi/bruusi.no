@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="bruusi">
+  <g transform="translate(48 48) rotate(-45)" stroke-width="2.4">
+    <!-- gammel glassflaske, liggende, munning mot høyre -->
+    <path fill="currentColor" fill-opacity="0.05" d="M-38,-16 L18,-16 C26,-16 28,-14 32,-10 L38,-7 L44,-7 L44,-9 L48,-9 L48,-6 L50,-6 L50,6 L48,6 L48,9 L44,9 L44,7 L38,7 L32,10 C28,14 26,16 18,16 L-38,16 C-43,16 -46,13 -46,8 L-46,-8 C-46,-13 -43,-16 -38,-16 Z"/>
+    <!-- ordmerke: bruusi (skript) -->
+    <g transform="translate(3 0)" stroke-width="1.9">
+      <path d="M-32.5,-13 C-33.6,-6 -33,0 -32.5,6"/>
+      <path d="M-32.5,6 C-31,7 -27,6.5 -26.4,2.6 C-26,-1 -30,-1.6 -32,0.6"/>
+      <path d="M-24.5,6 C-24.6,0 -24,-3 -23.5,-4 C-22.5,-5.2 -20.5,-5 -19.4,-3.4"/>
+      <path d="M-18,-4 C-18,2 -17.6,4.6 -15,4.6 C-12.8,4.6 -12.4,2 -12.4,-4"/>
+      <path d="M-12.4,-4 C-12.4,1 -12.4,4 -12,6"/>
+      <path d="M-11,-4 C-11,2 -10.6,4.6 -8,4.6 C-5.8,4.6 -5.4,2 -5.4,-4"/>
+      <path d="M-5.4,-4 C-5.4,1 -5.4,4 -5,6"/>
+      <path d="M2,-3 C1,-4.6 -2.6,-4.6 -2.6,-1.4 C-2.6,0.6 1.6,0.4 1.6,3 C1.6,5.6 -2,5.6 -3,3.4"/>
+      <path d="M4.5,-4 C4.5,1 4.5,4 5,6"/>
+      <circle cx="4.5" cy="-8" r="1.15" fill="currentColor" stroke="none"/>
+    </g>
+    <!-- brusbobler ved munningen -->
+    <g fill="currentColor" stroke="none" opacity=".85">
+      <circle cx="56" cy="-2" r="1.5"/>
+      <circle cx="60" cy="-8" r="1.1"/>
+      <circle cx="54" cy="-9" r=".9"/>
+    </g>
+  </g>
+</svg>

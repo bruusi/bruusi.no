@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Bruusi">
+  <style>
+    :root { color: #1a1a1a; }
+    @media (prefers-color-scheme: dark) { :root { color: #e8e9ec; } }
+  </style>
+  <g transform="translate(48 48) rotate(-45)" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path fill="currentColor" fill-opacity="0.06" d="M-38,-16 L18,-16 C26,-16 28,-14 32,-10 L38,-7 L44,-7 L44,-9 L48,-9 L48,-6 L50,-6 L50,6 L48,6 L48,9 L44,9 L44,7 L38,7 L32,10 C28,14 26,16 18,16 L-38,16 C-43,16 -46,13 -46,8 L-46,-8 C-46,-13 -43,-16 -38,-16 Z"/>
+    <g fill="currentColor" stroke="none">
+      <circle cx="56" cy="-2" r="2"/>
+      <circle cx="61" cy="-8" r="1.5"/>
+    </g>
+  </g>
+</svg>
