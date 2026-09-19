@@ -36,10 +36,10 @@
       'nav.om': 'about', 'nav.kontakt': 'contact',
 
       'kicker.intro': '// 01 · intro', 'kicker.erfaring': '// 02 · experience',
-      'kicker.reise': '// 03 · journey', 'kicker.om': '// 04 · about',
+      'kicker.reise': '// 03 · formative journey', 'kicker.om': '// 04 · about',
       'kicker.kontakt': '// 05 · contact',
 
-      'title.intro': 'Intro', 'title.erfaring': 'Experience', 'title.reise': 'Journey',
+      'title.intro': 'Intro', 'title.erfaring': 'Experience', 'title.reise': 'Formative journey',
       'title.om': 'About', 'title.kontakt': 'Contact',
 
       'intro.p1': 'Thomas Bruusgaard is a highly experienced technologist with more than 25 years in the field. ' +
@@ -84,10 +84,10 @@
       'nav.om': 'über', 'nav.kontakt': 'kontakt',
 
       'kicker.intro': '// 01 · intro', 'kicker.erfaring': '// 02 · erfahrung',
-      'kicker.reise': '// 03 · reise', 'kicker.om': '// 04 · über',
+      'kicker.reise': '// 03 · bildungsreise', 'kicker.om': '// 04 · über',
       'kicker.kontakt': '// 05 · kontakt',
 
-      'title.intro': 'Intro', 'title.erfaring': 'Erfahrung', 'title.reise': 'Reise',
+      'title.intro': 'Intro', 'title.erfaring': 'Erfahrung', 'title.reise': 'Bildungsreise',
       'title.om': 'Über', 'title.kontakt': 'Kontakt',
 
       'intro.p1': 'Thomas Bruusgaard ist ein sehr erfahrener Technologe mit über 25 Jahren Erfahrung. Er war an ' +
@@ -132,10 +132,10 @@
       'nav.om': 'sobre', 'nav.kontakt': 'contacto',
 
       'kicker.intro': '// 01 · intro', 'kicker.erfaring': '// 02 · experiencia',
-      'kicker.reise': '// 03 · viaje', 'kicker.om': '// 04 · sobre',
+      'kicker.reise': '// 03 · viaje de formación', 'kicker.om': '// 04 · sobre',
       'kicker.kontakt': '// 05 · contacto',
 
-      'title.intro': 'Intro', 'title.erfaring': 'Experiencia', 'title.reise': 'Viaje',
+      'title.intro': 'Intro', 'title.erfaring': 'Experiencia', 'title.reise': 'Viaje de formación',
       'title.om': 'Sobre', 'title.kontakt': 'Contacto',
 
       'intro.p1': 'Thomas Bruusgaard es un tecnólogo con más de 25 años de experiencia. Ha participado en varios ' +
