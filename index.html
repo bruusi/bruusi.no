@@ -172,29 +172,51 @@
         if (byId[id]) byId[id].classList.add('active');
       }
 
-      function pick() {
-        // Aktiv = seksjonen hvis topp er nærmest en linje nær toppen.
-        // Robust også når siden er for kort til at de nederste seksjonene
-        // rekker helt opp til linjen (da vinner den som er nærmest).
-        var line = 110;
+      // Hvilken seksjon geometrien tilsier ut fra scroll-posisjon. Nederst på
+      // siden ligger flere seksjoner synlige samtidig — da velges den siste.
+      function geometryPick() {
+        var line = 120;
+        var doc = document.documentElement;
+        var scrollable = doc.scrollHeight > window.innerHeight + 4;
+        if (scrollable && window.scrollY + window.innerHeight >= doc.scrollHeight - 2) {
+          return sections[sections.length - 1].id;
+        }
         var id = sections[0].id;
-        var best = Infinity;
         sections.forEach(function (s) {
-          var d = Math.abs(s.getBoundingClientRect().top - line);
-          if (d < best) { best = d; id = s.id; }
+          if (s.getBoundingClientRect().top <= line) id = s.id;
         });
-        setActive(id);
+        return id;
       }
+
+      // Et klikk (eller hash i URL) er fasit mens vi scroller dit: vi «låser»
+      // scroll-oppdateringer under klikkets egen animasjon, slik at det valgte
+      // punktet ikke overstyres av geometrien før du selv scroller manuelt.
+      var locked = false, unlockTimer = null;
+      function scheduleUnlock() {
+        clearTimeout(unlockTimer);
+        unlockTimer = setTimeout(function () { locked = false; }, 200);
+      }
+      function selectFromUser(id) { setActive(id); locked = true; scheduleUnlock(); }
+
+      links.forEach(function (a) {
+        a.addEventListener('click', function () { selectFromUser(a.getAttribute('href').slice(1)); });
+      });
 
       var ticking = false;
       function onScroll() {
+        if (locked) { scheduleUnlock(); return; } // scroll fra klikk-animasjonen: hold låsen
         if (ticking) return;
         ticking = true;
-        window.requestAnimationFrame(function () { pick(); ticking = false; });
+        window.requestAnimationFrame(function () { setActive(geometryPick()); ticking = false; });
       }
       window.addEventListener('scroll', onScroll, { passive: true });
       window.addEventListener('resize', onScroll);
-      pick();
+
+      // Åpnet med en hash (f.eks. /#kontakt) → marker den direkte og lås kort
+      // mens nettleseren hopper dit.
+      var initial = decodeURIComponent(window.location.hash.slice(1));
+      if (initial && byId[initial]) { selectFromUser(initial); }
+      else { setActive(geometryPick()); }
     })();
   </script>
 </body>
