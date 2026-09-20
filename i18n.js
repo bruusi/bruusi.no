@@ -42,7 +42,8 @@
       'title.intro': 'Intro', 'title.erfaring': 'Experience', 'title.reise': 'Formative journey',
       'title.om': 'About', 'title.kontakt': 'Contact',
 
-      'intro.p1': 'Thomas Bruusgaard is a highly experienced technologist with more than 25 years in the field. ' +
+      'intro.p1': 'Thomas Bruusgaard is a highly experienced software engineer and solution architect with more ' +
+        'than 25 years in the industry — a systems thinker who sees the whole rather than the parts. ' +
         'He has been involved in several large projects for companies at home and abroad. Specialist expertise in ' +
         'architecture and development of service-oriented solutions (SOA and event-driven). Passionate about agile ' +
         'development methods and well-established principles such as SOLID. A highly productive and experienced ' +
@@ -90,8 +91,9 @@
       'title.intro': 'Intro', 'title.erfaring': 'Erfahrung', 'title.reise': 'Bildungsreise',
       'title.om': 'Über', 'title.kontakt': 'Kontakt',
 
-      'intro.p1': 'Thomas Bruusgaard ist ein sehr erfahrener Technologe mit über 25 Jahren Erfahrung. Er war an ' +
-        'mehreren großen Projekten für Unternehmen im In- und Ausland beteiligt. Schwerpunkte sind Architektur und ' +
+      'intro.p1': 'Thomas Bruusgaard ist ein sehr erfahrener Softwareentwickler und Lösungsarchitekt mit über ' +
+        '25 Jahren Berufserfahrung — ein Systemdenker, der das Ganze sieht und nicht nur die Einzelteile. ' +
+        'Er war an mehreren großen Projekten für Unternehmen im In- und Ausland beteiligt. Schwerpunkte sind Architektur und ' +
         'Entwicklung serviceorientierter Lösungen (SOA und ereignisgesteuert). Er begeistert sich für agile ' +
         'Entwicklungsmethoden und bewährte Prinzipien wie SOLID. Ein äußerst produktiver und erfahrener Berater ' +
         'für Windows- und Weblösungen.',
@@ -138,7 +140,9 @@
       'title.intro': 'Intro', 'title.erfaring': 'Experiencia', 'title.reise': 'Viaje de formación',
       'title.om': 'Sobre', 'title.kontakt': 'Contacto',
 
-      'intro.p1': 'Thomas Bruusgaard es un tecnólogo con más de 25 años de experiencia. Ha participado en varios ' +
+      'intro.p1': 'Thomas Bruusgaard es ingeniero de software y arquitecto de soluciones con más de 25 años de ' +
+        'experiencia, con una mirada sistémica que atiende al conjunto y no solo a las partes. ' +
+        'Ha participado en varios ' +
         'grandes proyectos para empresas nacionales e internacionales. Especializado en arquitectura y desarrollo ' +
         'de soluciones orientadas a servicios (SOA y basadas en eventos). Apasionado por las metodologías ágiles y ' +
         'por principios consolidados como SOLID. Consultor muy productivo y experimentado tanto en soluciones ' +
