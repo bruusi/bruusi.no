@@ -185,16 +185,22 @@
     }
   };
 
+  /* ---------- Hjelpere ---------- */
+
+  // NodeList.forEach finnes ikke i eldre nettlesere; resten av filen er ES5.
+  function each(list, fn) { Array.prototype.forEach.call(list || [], fn); }
+  function $all(sel) { return document.querySelectorAll(sel); }
+
   /* ---------- Snapshot av norsk fra DOM ---------- */
 
   function snapshotNorwegian() {
-    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+    each($all('[data-i18n]'), function (el) {
       dict.no[el.getAttribute('data-i18n')] = el.innerHTML;
     });
-    document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
+    each($all('[data-i18n-alt]'), function (el) {
       dict.no[el.getAttribute('data-i18n-alt')] = el.getAttribute('alt') || '';
     });
-    document.querySelectorAll('[data-i18n-label]').forEach(function (el) {
+    each($all('[data-i18n-label]'), function (el) {
       dict.no[el.getAttribute('data-i18n-label')] = el.getAttribute('aria-label') || '';
     });
     var ogDesc = document.querySelector('meta[property="og:description"]');
@@ -266,25 +272,29 @@
 
     document.documentElement.setAttribute('lang', lang);
 
-    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+    // Bare strenger skrives ut. Mangler en nøkkel i alle ordbøker, blir verdien
+    // undefined — og da lar vi elementet stå som det er i stedet for å skrive
+    // «undefined» ut på siden.
+    each($all('[data-i18n]'), function (el) {
       var v = t(lang, el.getAttribute('data-i18n'));
-      if (v != null) el.innerHTML = v;
+      if (typeof v === 'string') el.innerHTML = v;
     });
-    document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
+    each($all('[data-i18n-alt]'), function (el) {
       var v = t(lang, el.getAttribute('data-i18n-alt'));
-      if (v != null) el.setAttribute('alt', v);
+      if (typeof v === 'string') el.setAttribute('alt', v);
     });
-    document.querySelectorAll('[data-i18n-label]').forEach(function (el) {
+    each($all('[data-i18n-label]'), function (el) {
       var v = t(lang, el.getAttribute('data-i18n-label'));
-      if (v != null) el.setAttribute('aria-label', v);
+      if (typeof v === 'string') el.setAttribute('aria-label', v);
     });
 
-    document.title = t(lang, 'meta.title');
+    var title = t(lang, 'meta.title');
+    if (typeof title === 'string') document.title = title;
     setMeta('meta[name="description"]', 'content', t(lang, 'meta.desc'));
-    setMeta('meta[property="og:title"]', 'content', t(lang, 'meta.title'));
+    setMeta('meta[property="og:title"]', 'content', title);
     setMeta('meta[property="og:description"]', 'content', t(lang, 'meta.ogdesc'));
 
-    document.querySelectorAll('.lang-switch a').forEach(function (a) {
+    each($all('.lang-switch a'), function (a) {
       var on = a.getAttribute('data-lang') === lang;
       a.classList.toggle('active', on);
       if (on) { a.setAttribute('aria-current', 'true'); } else { a.removeAttribute('aria-current'); }
@@ -293,7 +303,7 @@
 
   function setMeta(selector, attr, value) {
     var el = document.querySelector(selector);
-    if (el && value != null) el.setAttribute(attr, value);
+    if (el && typeof value === 'string') el.setAttribute(attr, value);
   }
 
   /* ---------- Brukerens valg ---------- */
@@ -309,16 +319,24 @@
 
   /* ---------- Oppstart ---------- */
 
-  snapshotNorwegian();
-
-  var initial = detect();
-  apply(initial);
-  // Kom språket fra URL-en, husk det som et aktivt valg.
-  if (fromQuery()) { try { localStorage.setItem(STORAGE_KEY, initial); } catch (e) {} }
+  // Skulle noe uventet feile under oppstart, skal siden fortsatt vise norsk —
+  // teksten ligger jo i HTML-en. Vi logger i stedet for å svelge feilen stille.
+  try {
+    snapshotNorwegian();
+    var initial = detect();
+    apply(initial);
+    // Kom språket fra URL-en, husk det som et aktivt valg.
+    if (fromQuery()) { try { localStorage.setItem(STORAGE_KEY, initial); } catch (e) {} }
+  } catch (e) {
+    if (window.console && console.error) console.error('i18n: oppstart feilet', e);
+  }
 
   // Delegert klikkhåndtering, så den overlever at tekst byttes ut.
   document.addEventListener('click', function (ev) {
-    var el = ev.target.closest('.lang-switch a[data-lang], .lang-chip[data-lang]');
+    var target = ev.target;
+    // ev.target kan være noe uten closest (f.eks. dokumentet selv).
+    if (!target || typeof target.closest !== 'function') return;
+    var el = target.closest('.lang-switch a[data-lang], .lang-chip[data-lang]');
     if (!el) return;
     ev.preventDefault();
     choose(el.getAttribute('data-lang'));

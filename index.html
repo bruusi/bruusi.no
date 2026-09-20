@@ -222,12 +222,16 @@
   <script src="/i18n.js"></script>
   <script>
     // Fyll inn gjeldende år, og marker aktiv seksjon i menyen.
-    document.getElementById('year').textContent = new Date().getFullYear();
+    var yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 
     (function () {
       var links = Array.prototype.slice.call(document.querySelectorAll('.site-nav a'));
       var byId = {};
-      links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+      links.forEach(function (a) {
+        var href = a.getAttribute('href') || '';
+        if (href.charAt(0) === '#') byId[href.slice(1)] = a;
+      });
       var sections = Array.prototype.slice.call(document.querySelectorAll('main .section'));
       if (!sections.length) return;
 
@@ -278,7 +282,10 @@
       function selectFromUser(id) { setActive(id); locked = true; scheduleUnlock(); }
 
       links.forEach(function (a) {
-        a.addEventListener('click', function () { selectFromUser(a.getAttribute('href').slice(1)); });
+        a.addEventListener('click', function () {
+          var href = a.getAttribute('href') || '';
+          if (href.charAt(0) === '#') selectFromUser(href.slice(1));
+        });
       });
 
       var ticking = false;
@@ -294,7 +301,14 @@
       // Åpnet med en hash (f.eks. /?lang=de#kontakt) → marker den direkte og lås
       // kort mens nettleseren hopper dit. i18n.js kjører synkront under parsing,
       // altså før ankerhoppet, så layouten er ferdig oversatt når det skjer.
-      var initial = decodeURIComponent(window.location.hash.slice(1));
+      // En ødelagt hash (f.eks. /#% eller /#%E0%A4%A) får decodeURIComponent til å
+      // kaste URIError. Da bruker vi den rå verdien i stedet — den matcher bare ingen
+      // seksjon, og vi faller pent tilbake på geometrien.
+      var raw = window.location.hash.slice(1);
+      var initial = '';
+      if (raw) {
+        try { initial = decodeURIComponent(raw); } catch (e) { initial = raw; }
+      }
       if (initial && byId[initial]) { selectFromUser(initial); }
       else { setActive(geometryPick()); }
     })();
