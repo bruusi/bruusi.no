@@ -46,8 +46,9 @@
         'than 25 years in the industry — a systems thinker who sees the whole rather than the parts. ' +
         'He has been involved in several large projects for companies at home and abroad. Specialist expertise in ' +
         'architecture and development of service-oriented solutions (SOA and event-driven). Passionate about agile ' +
-        'development methods and well-established principles such as SOLID. A highly productive and experienced ' +
-        'consultant across both Windows and web solutions.',
+        'development methods and well-established principles such as SOLID. ' +
+        'Productive and pragmatic, with broad platform experience — from classic enterprise systems ' +
+        'to modern distributed solutions.',
       'intro.p2': 'Thomas has worked in IT since 1999 and today works as a consultant for ' + A.everdeen +
         '. He is currently tech lead / solution architect at NRK.',
 
@@ -95,8 +96,9 @@
         '25 Jahren Berufserfahrung — ein Systemdenker, der das Ganze sieht und nicht nur die Einzelteile. ' +
         'Er war an mehreren großen Projekten für Unternehmen im In- und Ausland beteiligt. Schwerpunkte sind Architektur und ' +
         'Entwicklung serviceorientierter Lösungen (SOA und ereignisgesteuert). Er begeistert sich für agile ' +
-        'Entwicklungsmethoden und bewährte Prinzipien wie SOLID. Ein äußerst produktiver und erfahrener Berater ' +
-        'für Windows- und Weblösungen.',
+        'Entwicklungsmethoden und bewährte Prinzipien wie SOLID. ' +
+        'Produktiv und pragmatisch, mit breiter Plattformerfahrung — von klassischen Unternehmens' +
+        'systemen bis zu modernen verteilten Lösungen.',
       'intro.p2': 'Thomas arbeitet seit 1999 in der IT und ist heute als Berater für ' + A.everdeen +
         ' tätig. Derzeit ist er Tech Lead / Lösungsarchitekt beim NRK.',
 
@@ -145,8 +147,9 @@
         'Ha participado en varios ' +
         'grandes proyectos para empresas nacionales e internacionales. Especializado en arquitectura y desarrollo ' +
         'de soluciones orientadas a servicios (SOA y basadas en eventos). Apasionado por las metodologías ágiles y ' +
-        'por principios consolidados como SOLID. Consultor muy productivo y experimentado tanto en soluciones ' +
-        'Windows como web.',
+        'por principios consolidados como SOLID. ' +
+        'Productivo y pragmático, con amplia experiencia en plataformas: desde sistemas ' +
+        'empresariales clásicos hasta soluciones distribuidas modernas.',
       'intro.p2': 'Thomas trabaja en TI desde 1999 y hoy lo hace como consultor para ' + A.everdeen +
         '. En este momento es tech lead / arquitecto de soluciones en NRK.',
 
