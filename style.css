@@ -67,7 +67,11 @@ img { max-width: 100%; height: auto; display: block; }
   position: sticky;
   top: 0;
   z-index: 5;
+  /* Reserve først: uten color-mix-støtte forkastes neste linje, og da ville den
+     sticky headeren stått uten bakgrunn med tekst synlig under seg. */
+  background: var(--bg);
   background: color-mix(in srgb, var(--bg) 88%, transparent);
+  -webkit-backdrop-filter: saturate(140%) blur(8px); /* Safari 17 og eldre */
   backdrop-filter: saturate(140%) blur(8px);
   border-bottom: 1px solid var(--border);
 }
@@ -220,6 +224,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
   letter-spacing: 0.06em;
   color: var(--accent);
   background: var(--accent-soft);
+  border: 1px solid var(--accent); /* reserve uten color-mix */
   border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
   padding: 1px 7px;
   border-radius: 999px;
@@ -245,6 +250,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
   text-align: center;
   color: var(--accent);
   background: var(--accent-soft);
+  border: 1px solid var(--accent); /* reserve uten color-mix */
   border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
   border-radius: 4px;
   padding: 2px 0;
@@ -259,6 +265,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
   font-size: 0.7rem;
   color: var(--accent);
   background: var(--accent-soft);
+  border: 1px solid var(--accent); /* reserve uten color-mix */
   border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
   border-radius: 999px;
   padding: 4px 10px;
