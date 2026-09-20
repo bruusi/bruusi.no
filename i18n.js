@@ -50,8 +50,9 @@
         'Productive and pragmatic, with broad platform experience — from classic enterprise systems ' +
         'to modern distributed solutions.',
       'intro.p2': 'Thomas has worked in IT since 1999 and today works as a consultant for ' + A.everdeen +
-        '. His current client is NRK, the Norwegian public broadcaster, where he works on the ' +
-        'workflows that carry finished video all the way from production to the viewer.',
+        '. His current client is NRK, the Norwegian public broadcaster, where he works on the systems ' +
+        'and designs the workflows that let journalists and producers create and publish great ' +
+        'content for viewers.',
 
       'erfaring.lead': 'A selection of the clients he has worked with:',
       'erfaring.badge': 'now',
@@ -102,7 +103,8 @@
         'systemen bis zu modernen verteilten Lösungen.',
       'intro.p2': 'Thomas arbeitet seit 1999 in der IT und ist heute als Berater für ' + A.everdeen +
         ' tätig. Aktueller Kunde ist NRK, der öffentlich-rechtliche Rundfunk Norwegens, wo er an den ' +
-        'Workflows arbeitet, die fertig produziertes Video bis zum Zuschauer bringen.',
+        'Systemen arbeitet und die Workflows gestaltet, mit denen Journalisten und Produzenten ' +
+        'gute Inhalte für die Zuschauer erstellen und veröffentlichen.',
 
       'erfaring.lead': 'Eine Auswahl der Kunden, für die er gearbeitet hat:',
       'erfaring.badge': 'jetzt',
@@ -153,8 +155,9 @@
         'Productivo y pragmático, con amplia experiencia en plataformas: desde sistemas ' +
         'empresariales clásicos hasta soluciones distribuidas modernas.',
       'intro.p2': 'Thomas trabaja en TI desde 1999 y hoy lo hace como consultor para ' + A.everdeen +
-        '. Su cliente actual es NRK, la radiotelevisión pública noruega, donde trabaja en los flujos ' +
-        'que llevan el vídeo ya producido hasta el espectador.',
+        '. Su cliente actual es NRK, la radiotelevisión pública noruega, donde trabaja en los sistemas ' +
+        'y diseña los flujos de trabajo que permiten a periodistas y productores crear y publicar ' +
+        'buen contenido para los espectadores.',
 
       'erfaring.lead': 'Una selección de los clientes con los que ha trabajado:',
       'erfaring.badge': 'ahora',
