@@ -50,7 +50,8 @@
         'Productive and pragmatic, with broad platform experience — from classic enterprise systems ' +
         'to modern distributed solutions.',
       'intro.p2': 'Thomas has worked in IT since 1999 and today works as a consultant for ' + A.everdeen +
-        '. He is currently tech lead / solution architect at NRK.',
+        '. His current client is NRK, the Norwegian public broadcaster, where he works on the ' +
+        'workflows that carry finished video all the way from production to the viewer.',
 
       'erfaring.lead': 'A selection of the clients he has worked with:',
       'erfaring.badge': 'now',
@@ -100,7 +101,8 @@
         'Produktiv und pragmatisch, mit breiter Plattformerfahrung — von klassischen Unternehmens' +
         'systemen bis zu modernen verteilten Lösungen.',
       'intro.p2': 'Thomas arbeitet seit 1999 in der IT und ist heute als Berater für ' + A.everdeen +
-        ' tätig. Derzeit ist er Tech Lead / Lösungsarchitekt beim NRK.',
+        ' tätig. Aktueller Kunde ist NRK, der öffentlich-rechtliche Rundfunk Norwegens, wo er an den ' +
+        'Workflows arbeitet, die fertig produziertes Video bis zum Zuschauer bringen.',
 
       'erfaring.lead': 'Eine Auswahl der Kunden, für die er gearbeitet hat:',
       'erfaring.badge': 'jetzt',
@@ -151,7 +153,8 @@
         'Productivo y pragmático, con amplia experiencia en plataformas: desde sistemas ' +
         'empresariales clásicos hasta soluciones distribuidas modernas.',
       'intro.p2': 'Thomas trabaja en TI desde 1999 y hoy lo hace como consultor para ' + A.everdeen +
-        '. En este momento es tech lead / arquitecto de soluciones en NRK.',
+        '. Su cliente actual es NRK, la radiotelevisión pública noruega, donde trabaja en los flujos ' +
+        'que llevan el vídeo ya producido hasta el espectador.',
 
       'erfaring.lead': 'Una selección de los clientes con los que ha trabajado:',
       'erfaring.badge': 'ahora',
